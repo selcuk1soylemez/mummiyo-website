@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Yönetim paneli arama motorlarına kapalıdır
+Disallow: /admin/
+
+# Site haritası
+Sitemap: https://www.mummiyo.com/sitemap.xml

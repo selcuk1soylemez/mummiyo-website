@@ -1,0 +1,37 @@
+# Decap CMS yapılandırması — Mummiyo
+backend:
+  name: github
+  repo: kullanici/mummiyo-website
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+site_url: "https://www.mummiyo.com"
+display_url: "https://www.mummiyo.com"
+logo_url: "/assets/images/mummiyo-og.jpg"
+
+collections:
+  - name: "blog"
+    label: "Blog Yazıları"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
+      - { label: "Açıklama / SEO Meta", name: "description", widget: "string" }
+      - { label: "Kapak Görseli", name: "image", widget: "image" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+
+  - name: "urun"
+    label: "Ürün Bilgileri"
+    files:
+      - file: "content/product.json"
+        label: "Mummiyo Ürün Fiyatı & Detayları"
+        name: "product"
+        fields:
+          - { label: "Ürün Adı", name: "title", widget: "string" }
+          - { label: "Fiyat (TL)", name: "price", widget: "number" }
+          - { label: "İndirimli Fiyat (TL)", name: "discountPrice", widget: "number" }
+          - { label: "Stok Durumu", name: "inStock", widget: "boolean" }
