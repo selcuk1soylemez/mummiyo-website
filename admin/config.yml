@@ -1,8 +1,10 @@
 # Decap CMS yapılandırması — Mummiyo
 backend:
   name: github
-  repo: kullanici/mummiyo-website
+  repo: selcuk1soylemez/mummiyo-website
   branch: main
+  base_url: https://decap-cms-oauth-backend.vercel.app
+  auth_endpoint: /api/auth
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
