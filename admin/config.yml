@@ -1,6 +1,5 @@
 # Decap CMS yapılandırması — Mummiyo
 backend:
-  backend:
   name: github
   repo: selcuk1soylemez/mummiyo-website
   branch: main
