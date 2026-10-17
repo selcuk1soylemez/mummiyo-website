@@ -58,6 +58,13 @@
     }
   }
   </script>
+  <!-- Font ve CDN Bağlantılarını Hızlandırma -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- CSS Yükleme Engellemesini Önleme (Render-blocking Fix) -->
+<link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
 </head>
 <body>
 
@@ -365,6 +372,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
