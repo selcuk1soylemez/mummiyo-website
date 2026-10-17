@@ -3,14 +3,14 @@ backend:
   name: github
   repo: selcuk1soylemez/mummiyo-website
   branch: main
-  base_url: https://squeegee.decapcms.org
-  auth_endpoint: /api/v1/authorize
+  base_url: https://gentle-recipe-dc84.doguu0.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
-site_url: "https://www.mummiyo.com"
-display_url: "https://www.mummiyo.com"
+site_url: "https://selcuk1soylemez.github.io/mummiyo-website"
+display_url: "https://selcuk1soylemez.github.io/mummiyo-website"
 logo_url: "/assets/images/mummiyo-og.jpg"
 
 collections:
