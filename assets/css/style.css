@@ -19,7 +19,7 @@
   --c-gold: #b8914f;        /* altın dokunuş */
   --c-gold-soft: #d2b27a;   /* açık altın */
   --c-gold-pale: #f3ead8;   /* altın tonlu açık zemin */
-  --c-muted: #6c6f64;       /* gri-yeşil metin */
+  --c-muted: #5a5d52;       /* gri-yeşil metin (AA kontrast için koyulaştırıldı) */
 
   /* Tipografi */
   --font-head: "Playfair Display", "Georgia", serif;
@@ -586,7 +586,7 @@ p { margin: 0; }
   padding-block: 72px 48px;
 }
 .footer-brand p { font-size: 14px; max-width: 34ch; margin-top: 16px; }
-.footer-col h4 { color: var(--c-white); font-family: var(--font-body); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px; }
+.footer-col h3 { color: var(--c-white); font-family: var(--font-body); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px; }
 .footer-col a { display: block; padding-block: 6px; font-size: 14px; transition: color var(--speed) var(--ease), transform var(--speed) var(--ease); }
 .footer-col a:hover { color: var(--c-gold-soft); transform: translateX(4px); }
 .footer-bottom {

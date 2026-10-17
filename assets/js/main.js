@@ -89,11 +89,13 @@
     var overlay = document.createElement('div');
     overlay.className = 'cart-overlay';
     overlay.setAttribute('aria-hidden', 'true');
+    overlay.inert = true;
 
     var drawer = document.createElement('aside');
     drawer.className = 'cart-drawer';
     drawer.setAttribute('aria-hidden', 'true');
     drawer.setAttribute('aria-label', 'Sepet');
+    drawer.inert = true;
     drawer.innerHTML =
       '<div class="cart-head">' +
         '<h2>Sepetiniz</h2>' +
@@ -148,6 +150,8 @@
       document.body.classList.add('cart-open');
       overlay.setAttribute('aria-hidden', 'false');
       drawer.setAttribute('aria-hidden', 'false');
+      overlay.inert = false;
+      drawer.inert = false;
     }
   }
 
@@ -158,6 +162,8 @@
       document.body.classList.remove('cart-open');
       overlay.setAttribute('aria-hidden', 'true');
       drawer.setAttribute('aria-hidden', 'true');
+      overlay.inert = true;
+      drawer.inert = true;
     }
   }
 
@@ -594,8 +600,14 @@
 
     /* Nav shadow on scroll */
     var header = document.querySelector('.site-header');
+    var scrollTicking = false;
     var onScroll = function () {
-      if (header) header.classList.toggle('scrolled', window.scrollY > 10);
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(function () {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 10);
+        scrollTicking = false;
+      });
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
